@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Web Application</title>
+</head>
+<body>
+  <h1>Mini Web Application</h1>
+  <img src="/images/logo.png" alt="Logo" width="120">
+
+  <section>
+    <h2>Greeting service</h2>
+    <form id="greet-form">
+      <input type="text" id="name-input" placeholder="Your name" required>
+      <button type="submit">Greet me</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Square service</h2>
+    <form id="square-form">
+      <input type="number" id="value-input" placeholder="A number" required>
+      <button type="submit">Square it</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Server time</h2>
+    <button id="time-btn">What time is it on the server?</button>
+  </section>
+
+  <section>
+    <h2>Result</h2>
+    <div id="result" aria-live="polite"></div>
+    <div id="error" style="color:red;" aria-live="assertive"></div>
+  </section>
+
+  <img src="/images/photo.jpg" alt="Sample photo" width="200">
+
+  <script src="/app.js"></script>
+</body>
+</html>
