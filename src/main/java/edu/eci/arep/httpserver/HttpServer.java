@@ -1,5 +1,4 @@
 package edu.eci.arep.httpserver;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,11 +12,8 @@ import java.nio.file.Paths;
 import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;
-
 public class HttpServer {
-
     private static final String PUBLIC_PREFIX = "public";
-
     public static void main(String[] args) throws IOException {
         int port = resolvePort(args);
         try (ServerSocket serverSocket = new ServerSocket(port)) {
@@ -34,7 +30,6 @@ public class HttpServer {
             }
         }
     }
-
     private static int resolvePort(String[] args) {
         if (args.length > 0) {
             return Integer.parseInt(args[0]);
@@ -45,7 +40,6 @@ public class HttpServer {
         }
         return 35000;
     }
-
     private static void handleClient(Socket socket) throws IOException {
         socket.setSoTimeout(10000);
         InputStream rawIn = socket.getInputStream();
